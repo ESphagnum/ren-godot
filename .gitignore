@@ -1,0 +1,25 @@
+# Godot 4+ specific ignores
+.godot/
+.vscode/
+/android/
+addons/
+*.ogg
+*.mp3
+*.mp4
+*.png
+*.jpg
+*.rpy
+*.import
+*.rpyc
+*.tmp
+*.svg
+*.ttf
+*.otf
+*.woff
+*.webp
+*.webm
+*.wav
+*.txt
+*.rpym
+*.rpymc
+*.pck

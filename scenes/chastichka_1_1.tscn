@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdbsh1nco4b2y"]
+
+[ext_resource type="Texture2D" uid="uid://crb6ygxk1etxk" path="res://images/interface/main_meny/partikl_001.png" id="1_ahut6"]
+[ext_resource type="Texture2D" uid="uid://biyr5hhbhy8qm" path="res://objects/chastichka.tres" id="2_3tndi"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ahut6"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -300, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 540, 1)
+direction = Vector3(1, -1, 0)
+initial_velocity_max = 77.25
+gravity = Vector3(9, 0, 0)
+tangential_accel_min = -5.000002
+tangential_accel_max = 10.999997
+tangential_accel_curve = ExtResource("2_3tndi")
+turbulence_noise_strength = 20.0
+
+[node name="chastichka_1_1" type="Node2D" unique_id=475147744]
+position = Vector2(0, 540)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=137725605]
+amount = 6
+texture = ExtResource("1_ahut6")
+lifetime = 25.0
+process_material = SubResource("ParticleProcessMaterial_ahut6")
