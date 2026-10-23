@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dna8iyyd58gj2"]
+
+[node name="Mom" type="Node2D" unique_id=1131457527]
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1197609431]
+
+[node name="Eyes" type="Sprite2D" parent="." unique_id=630674284]
+
+[node name="Mounth" type="Sprite2D" parent="." unique_id=632868057]

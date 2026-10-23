@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c1boaxg2i2bdn"]
+
+[ext_resource type="Texture2D" uid="uid://j5cqhgsplrcp" path="res://images/effect/snow/s001.png" id="1_hko75"]
+[ext_resource type="Texture2D" uid="uid://biyr5hhbhy8qm" path="res://objects/chastichka.tres" id="2_0a024"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8bw1v"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+anim_speed_curve = ExtResource("2_0a024")
+turbulence_noise_strength = 5.83
+turbulence_noise_speed = Vector3(30, 5, 30)
+turbulence_noise_speed_random = 3.7
+turbulence_influence_min = 0.0
+turbulence_influence_max = 0.216
+turbulence_influence_over_life = ExtResource("2_0a024")
+
+[node name="Button" type="Node2D" unique_id=229457395]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1866763173]
+texture = ExtResource("1_hko75")
+lifetime = 32.68
+trail_lifetime = 2.9699999999999998
+trail_section_subdivisions = 3
+process_material = SubResource("ParticleProcessMaterial_8bw1v")

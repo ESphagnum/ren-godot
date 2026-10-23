@@ -1,0 +1,522 @@
+~ day1
+do AudioManager.stop_music()
+do StageManager.show_window()
+
+Всю ночь ветер скрёбся в окно когтями.
+Он бродил по полям и завывал голодным зверем.
+Бесконечная песнь вилась, словно верёвка, сплетённая из самых разных — тонких, вкрадчивых, насмешливых — голосов.
+Казалось, они кричат и смеются...
+...и спорят о чём-то.
+
+do StageManager.show("bg_win_f_50_1")
+
+Кто-то носился по снегу, отбрасывая длинные тени. Они то подходили к кровати, то отступали.
+Дом жил своей жизнью — скрипучей жизнью старых зданий, которые помнят столько всего и будто пытаются рассказать.
+Одинокий дом глядел на лес, а чащоба смотрела в ответ своими глазищами-дуплами и шуршала, шумела, кивала...
+Можно выйти и постоять у кромки леса, просто чтобы убедиться — там, за кривыми деревьями, никого нет.
+Смутные, мотающиеся на ветру силуэты не причинят вреда.
+Это же игра света и тени...
+Просто такая игра.
+Я понимаю, что это лишь моё воображение, — мне ведь уже двенадцать.
+Но всё же...
+
+do StageManager.hide_window()
+do AudioManager.stop_fon(3.0)
+do StageManager.show("bg_win_f_100_1")
+do StageManager.pause(2.0)
+
+do AudioManager.play_fon("res://sounds/fon/kitchen001.ogg", 5.0)
+do AudioManager.queue_fon("res://sounds/fon/kitchen002.ogg", 5.0, true)
+do AudioManager.play_music("res://music/1_Melancholy(Tiny_Bunny).ogg", 6.0, true, 0.7)
+
+do StageManager.crossfade("bg_white", 1.0)
+do StageManager.pause(0.1)
+
+do StageManager.reveal_scene(["bg_logo3"], "bg_white", 1.0)
+do NovelScene.show_chapter_title("Эпизод I: Прилети, сова", "000000", 0.5)
+do StageManager.pause(1.0)
+do NovelScene.wait_for_click()
+do StageManager.pause(1.0)
+do NovelScene.hide_chapter_title(0.5)
+
+do StageManager.reveal_scene(["bg_white"], "bg_logo3", 1.0)
+do StageManager.pause(1)
+
+# ===== СЦЕНА 1: КУХНЯ =====
+
+do StageManager.reveal_scene(["bg_white", "kitchen1_1", "kitchen_ol2", "kitchen_ant2_book"], "bg_white", 3.0)
+do StageManager.hide("bg_white", 3.0)
+do AudioManager.play_sfx("res://sounds/steps/mam_in.ogg")
+
+do Characters.show_t("Mom", "Normal", "m_day", "01", "norm", "aside", "", "income")
+do StageManager.show_window()
+
+do AudioManager.play_voice("res://voice/karina/10 K.ogg")
+Мама: Убери книгу немедленно!
+
+do StageManager.show_dissolve("kitchen_ol1", 0.3)
+do StageManager.pause(0.3)
+
+do AudioManager.play_voice("res://voice/karina/01 K.ogg")
+Мама: Сколько раз говорила — не читай за столом! Вредно! Сидишь, ссутулился весь!
+
+do StageManager.hide_window()
+do StageManager.scene_multi(["bg_black", "kitchen1_1", "kitchen_ant1_book", "kitchen_ol2"])
+do Characters.set_expression("Mom", "Normal", "m_day", "01", "norm", "aside")
+do Characters.play("Mom", "right")
+do StageManager.pause(0.3)
+
+do Menus.show_menu("day1_book")
+
+do StageManager.show("kitchen_ant2")
+do StageManager.hide("kitchen_ant1_book")
+do StageManager.pause(0.5)
+
+do StageManager.show_window()
+Я послушно отложил книгу о похождениях Конана-варвара.
+
+do StageManager.show_dissolve("kitchen_ol1", 0.3)
+Всё равно я прочитал одну и ту же строчку три раза и ничего не понял.
+do StageManager.show_dissolve("kitchen_ol2", 0.3)
+Оля уже позавтракала и взялась за печенье. Хрустела с аппетитом, как девочки из рекламы.
+do AudioManager.play_voice("res://voice/karina/12 K.ogg")
+Мама: Пока не съешь — из-за стола не встанешь!
+А я всё буравил взглядом манку, словно надеялся, что она рассосётся сама по себе.
+Смутная тревога распирала. Всё из-за бессонной ночи, чёрного леса, огибающего двор, и угрюмого ветра...
+do StageManager.show_dissolve("kitchen_ol1", 0.3)
+Чем дольше я тянул, тем холоднее становилась комковатая белая масса.
+do StageManager.show_dissolve("kitchen_ol2", 0.3)
+Будто медуза из «Подводной одиссеи Кусто». Обожаю эту передачу.
+Интересно, на дне океана очень жутко?
+А ночью в холодном чёрном лесу?
+do StageManager.hide_window()
+do StageManager.hide("kitchen_ant1", 0.5)
+do StageManager.show_dissolve("kitchen_ant3", 0.5)
+do AudioManager.play_sfx("res://sounds/spoon-2.ogg")
+do StageManager.pause(0.3)
+do StageManager.show_window()
+Ложка выпала из руки.
+Мама плеснула студёным взглядом зелёных глаз.
+
+do AudioManager.play_voice("voice/karina/13 K.ogg")
+Что я говорила?
+do AudioManager.play_voice("voice/anton/1day/001. YA dost.ogg")
+Я достану!
+do AudioManager.play_sfx("sounds/steps/Olya-stand-up-1.ogg")
+do StageManager.show_dissolve("kitchen_ant0", 0.5)
+
+Десятисекундная передышка перед новым сражением с гадкой кашей.
+Я нащупал ложку.
+
+do AudioManager.play_sfx("sounds/steps/mam_out.ogg")
+do Characters.show_t("Mom", "Normal", "m_day", "01", "norm", "aside", "", "reverse_and_out1")
+do StageManager.show_dissolve("kitchen_ol1", 0.3)
+"А что это такое нацарапано снизу на столешнице?"
+do StageManager.show_dissolve("under_table", 0.5)
+"«Ка-ри-на»."
+do AudioManager.play_sfx("sounds/nadpis-fix.ogg")
+"Ха-х, это же мамино имя!"
+"Видимо, это она в детстве накарябала чем-то острым."
+"Оказывается, хулиганкой была — мебель портила."
+"Ох, меня бы она за такое неделю ругала."
+"Напомнить ей о шалости?"
+"Нет. Что-то она не в духе в последнее время."
+"Я вообразил, как она, моя ровесница, сидела здесь, под столом."
+do AudioManager.stop_music(6)
+"Интересно, в детстве мама боялась темноты?"
+"А шороха на чердаке?"
+"А лесных дебрей?.."
+do AudioManager.play_music("music/2_Anxiety.ogg", 2)
+do AudioManager.stop_fon(3)
+do StageManager.show_dissolve("bg_black", 1.0)
+do StageManager.pause(1.0)
+do StageManager.show("grand_mather")
+do StageManager.show("memory_ramka")
+do StageManager.show("bg_black")
+do StageManager.hide("bg_black", 1.5)
+"Я представил, как бабушка заходит в спальню к моей маленькой маме, садится на край кроватки, где теперь спит Оля, и рассказывает мягким вкрадчивым голосом:"
+do AudioManager.play_voice("voice/grandmother/1. Taiga.ogg")
+Gra: "Тайга – особое место, дитятко."
+do AudioManager.play_voice("voice/grandmother/2. Ona.ogg")
+Gra: "Она к тебе присматривается, принюхивается."
+do AudioManager.play_voice("voice/grandmother/3. Slovno.ogg")
+Gra: "Словно хочет понять, что ты за зверь такой."
+do AudioManager.play_voice("voice/grandmother/4.Ponrav.ogg")
+Gra: "Понравишься – в беде не бросит."
+do AudioManager.play_voice("voice/grandmother/5.A bud.ogg")
+Gra: "А будешь проказничать – схватит за бочок и утащит с собой под землю."
+do AudioManager.play_voice("voice/grandmother/6.Tut.ogg")
+Gra: "Тут и дело с концом."
+"Бабушка была ласковой, никогда ни с кем не ссорилась, не ругалась..."
+"Тогда не было этих сводящих с ума криков до глубокой ночи, разбитой посуды и взаимных обвинений."
+"В то время наши родители ещё любили друг друга."
+"Помню, я случайно подслушал родительский разговор и узнал, что бабушка заранее побеспокоилась о своих похоронах."
+"Купила себе гроб."
+"И называла его ласково «гробиком»."
+"Он стоял в чулане, словно терпеливо ждал."
+"Чёрный, с обивкой цвета мяса – это я увидел потом, когда бабушку хоронили."
+do StageManager.show_dissolve("bg_black", 3)
+"Дом остался таким же, каким и был при бабуле. Только фотографии все убрали куда-то."
+do AudioManager.stop_music(6)
+do StageManager.scene("bg_black")
+"Застеклённые снимки с серыми лицами моих предков. У всех плоские, но зоркие неживые глаза."
+do AudioManager.play_music("music/1_Melancholy(Tiny_Bunny).ogg", 0.7, 6)
+do StageManager.hide("memory_ramka")
+do StageManager.scene_multi(["kitchen1_1", "kitchen_ant1", "kitchen_ol2", "bg_black"])
+do StageManager.hide("bg_black", 2)
+"Я выбрался из-под стола."
+"Оля расправилась с печеньем и, как хитрый зверёк, поглядывала на мою порцию."
+"Я бросил взгляд на заиндевевшее окно."
+"Снаружи темнели сосны, но не они привлекли моё внимание."
+"Январский узор складывался в картинку."
+do StageManager.scene("bg_win_f_100", 1.0)
+
+do AudioManager.play_voice("res://voice/anton/1day/002. Olja gl.ogg")
+Ант: Оля, гляди, лиса!
+
+do AudioManager.play_voice("res://voice/olya/02 O.ogg")
+Оля: Где?
+
+Похоже на оптические иллюзии на задних обложках тетрадок.
+Вроде мешанина из чёрточек, но если расфокусировать взгляд...
+...и посмотреть под определённым углом...
+
+do StageManager.reveal_scene(["kitchen1_1", "kitchen_ol2", "kitchen_ant1"], "bg_win_f_100", 0.5)
+
+do AudioManager.play_voice("res://voice/anton/1day/003. Da ne.ogg")
+Ант: Да не на улице! На стекле!
+
+do StageManager.show_dissolve("kitchen_ol3", 0.5)
+
+do AudioManager.play_voice("res://voice/anton/1day/004. Smotri.ogg")
+Ант: Смотри, вот нос. Вот...
+
+do AudioManager.play_sfx("res://sounds/steps/mam_in.ogg")
+do Characters.show_t("Mom", "Normal", "m_day", "01", "norm", "aside", "", "income")
+
+do AudioManager.play_voice("res://voice/karina/14 K.ogg")
+Мама: Ну-ка, доедай!
+
+do AudioManager.play_voice("res://voice/anton/1day/005. Da da.ogg")
+Ант: Да, да... сейчас.
+
+do StageManager.show_dissolve("kitchen_ol2", 0.5)
+do Characters.set_expression("Mom", "Normal", "m_day", "01", "norm", "aside")
+do Characters.play("Mom", "right")
+
+do AudioManager.play_voice("res://voice/olya/03 O.ogg")
+Оля: Я ничего не вижу.
+
+do AudioManager.play_voice("res://voice/karina/15 K.ogg")
+Мама: Живо, совсем немного осталось!
+
+do StageManager.show_dissolve("kitchen_ol3", 0.5)
+
+do AudioManager.play_voice("res://voice/olya/04 O.ogg")
+Оля: А-а-а-а! Вот... Но всё равно не похоже.
+
+do AudioManager.play_voice("res://voice/anton/1day/006.A ja gov.ogg")
+Ант: А я говорю — похоже.
+
+do StageManager.show_dissolve("kitchen_ol2", 0.5)
+
+do AudioManager.play_voice("res://voice/olya/05 O.ogg")
+Оля: Не-а!
+
+do AudioManager.play_voice("res://voice/anton/1day/007.Pohozhe_.ogg")
+Ант: Похоже!
+
+do AudioManager.play_voice("res://voice/karina/16 K.ogg")
+Мама: Прекратите! Ну что за дети...
+
+do Characters.hide_character("Mom", true)
+do StageManager.reveal_scene(["bg_win_f_0"], "kitchen1_1", 0.5)
+
+Теперь и я не мог отыскать лису.
+Она исчезла.
+Ушла.
+Лишь узоры ползли по стеклу, похожие на вытянутые листья крапивы.
+
+do StageManager.reveal_scene(["kitchen1_1", "kitchen_ol2", "kitchen_ant1"], "bg_win_f_0", 0.5)
+do AudioManager.play_sfx("res://sounds/steps/pap_in.ogg")
+do Characters.show_t("Dad", "Normal", "m_day", "01", "norm", "aside", "", "income")
+
+На кухню вошёл папа, большой и неторопливый.
+Хочу, когда вырасту, стать как он — бородачом!
+Мама, шутя, всё просила папу: «Ну сбрей, колется же!»
+
+do AudioManager.stop_music(10.0)
+do AudioManager.play_music("music/3_trouble.ogg", 15.0, true, 0.9)
+
+Как давно это было...
+А теперь каждый день грохот дверей и мстительные колкости.
+Автор: Оля зажимала уши, когда за стеной раздавались голоса: «Ради чего это всё?»
+
+do StageManager.show_dissolve("kitchen_ol1", 0.5)
+do Characters.set_expression("Mom", "Normal", "m_day", "01", "norm", "aside")
+do Characters.play("Mom", "right")
+do Characters.show_t("Dad", "Normal", "m_day", "01", "norm", "aside", "", "left")
+
+«Ради вас! — отвечал папа, — Ради семьи!»
+Я ловил каждый звук и боялся услышать самое страшное, самое убийственное слово на букву «р».
+
+do StageManager.show_dissolve("kitchen_ol2", 0.3)
+
+Р-а-з-в...
+Не хочу даже продолжать.
+Боюсь представить, что нас с сестрёнкой разлучат и разведут по разным семьям.
+
+do AudioManager.play_voice("res://voice/olya/06 O.ogg")
+Оля: Да что твоя лиса. Вот у меня на окне сова!
+
+do AudioManager.play_voice("res://voice/father/01 F.ogg")
+Папа: Опять ты со своей совой!
+
+do AudioManager.play_voice("res://voice/olya/07 O.ogg")
+Оля: Так ты же вчера мне верил!
+
+do AudioManager.play_voice("res://voice/father/02 F.ogg")
+Папа: Никто ключи от машины не видел?
+
+do AudioManager.play_voice("res://voice/father/03 F.ogg")
+Папа: Вроде оставлял на подоконнике...
+
+do AudioManager.play_voice("res://voice/karina/17 K.ogg")
+Мама: Вроде...
+
+do AudioManager.play_voice("res://voice/karina/18 K.ogg")
+Мама: Вроде оставлял, вроде нет.
+
+do AudioManager.play_voice("res://voice/karina/19 K.ogg")
+Мама: Вроде взрослый мужчина, отец двоих детей, а вроде...
+
+do AudioManager.play_voice("res://voice/father/04 F.ogg")
+Папа: Перестань, пожалуйста, Карина.
+
+do AudioManager.play_voice("res://voice/father/06 F.ogg")
+Папа: Дай мне спокойно собраться.
+
+do AudioManager.play_voice("res://voice/karina/20 K.ogg")
+Мама: В корзине твои ключи, возле телефона.
+
+do AudioManager.play_voice("res://voice/father/07 F.ogg")
+Папа: Огромное тебе человеческое спасибо.
+
+do StageManager.show_dissolve("kitchen_ol1", 0.3)
+
+do AudioManager.play_voice("res://voice/father/08 F.ogg")
+Папа: Антон, ешь быстрее, а то как мученик сидишь...
+
+do AudioManager.play_voice("res://voice/olya/07A O.ogg")
+Оля: А сова...
+
+do AudioManager.play_voice("res://voice/father/09 F.ogg")
+Папа: Не было там никакой совы.
+
+do StageManager.show_dissolve("kitchen_ol2", 0.5)
+
+do AudioManager.play_voice("res://voice/olya/08 O.ogg")
+Оля: Была!
+
+do AudioManager.play_voice("res://voice/olya/09 O.ogg")
+Оля: Глазюки огромные — во! И светятся.
+
+do StageManager.show_dissolve("kitchen_ol0", 0.5)
+do AudioManager.play_sfx("res://sounds/steps/Olya-stand-up-1.ogg")
+
+do Characters.show_char("Olya", "Serious", "m_day", "00", "good", "ahead", "01")
+
+Оля вскочила со стула и приставила руки к личику, показывая пальцами глаза, каждый величиной с яблоко.
+
+do AudioManager.play_voice("res://voice/father/10 F.ogg")
+Папа: В прошлом году — Бабай в шкафу, сейчас — сова?
+
+do AudioManager.play_voice("res://voice/olya/10 O.ogg")
+Оля: Ну-у я же видела...
+
+Оля переводила взгляд с отца на маму, потом на меня, но нигде не находила поддержки.
+
+do AudioManager.play_voice("res://voice/father/11 F.ogg")
+Папа: А ты не думала подружиться с ней, нет?
+
+do AudioManager.play_voice("res://voice/father/12 F.ogg")
+Папа: Вымышленными мышами покормить, например?
+
+do AudioManager.play_voice("res://voice/karina/21 K.ogg")
+Мама: Не подначивай ребёнка.
+
+do AudioManager.play_voice("res://voice/karina/22 K.ogg")
+Мама: Просто мала ещё и спать одна боится.
+
+do Characters.hide_character("Olya", true)
+do AudioManager.play_sfx("res://sounds/steps/Olya-ladder-steps-1.ogg")
+
+Оля капризно надула губы и опрометью вылетела в коридор.
+Заскрипела лестница, ведущая на второй этаж.
+
+do Characters.set_expression("Mom", "Angry", "m_day", "01", "norm", "aside")
+do Characters.play("Mom", "right")
+
+Мама строго посмотрела на отца.
+
+do AudioManager.stop_music(10.0)
+
+Ох, этот взгляд! Как же неуютно под его прицелом.
+
+do AudioManager.play_sfx("res://sounds/steps/pap_out.ogg")
+do Characters.play("Dad", "out")
+do AudioManager.play_sfx("res://sounds/Key.ogg")
+
+do AudioManager.play_voice("res://voice/father/13 F.ogg")
+
+Папа лишь фыркнул и ушёл, звеня связкой найденных ключей.
+
+do AudioManager.play_sfx("res://sounds/steps/Olya-ladde.ogg")
+
+Спустя минуту на весь дом раздалась мелодия из «Русалочки».
+Это была затёртая до дыр кассетная плёнка, которую папа уже склеивал однажды.
+С вещами всё просто — их можно починить или вот, склеить.
+А как быть с отношениями?
+
+do AudioManager.play_sfx("res://sounds/steps/mam_out.ogg")
+do Characters.hide_character("Mom", true)
+
+Мама ушла в гостиную, и я остался один, обеспокоенно поглядывая в окно.
+
+# ===== СЦЕНА: НОЧЬ ОЛИ =====
+
+do StageManager.hide_window()
+do AudioManager.stop_fon(0.0)
+do AudioManager.stop_music(0.0)
+do AudioManager.play_music("music/4_Olya's nightmare.ogg", 6.0, true)
+
+do StageManager.reveal_scene(["bg_black"], "kitchen1_1", 1.0)
+do StageManager.show("Olya_and_Owl0")
+do StageManager.show("memory_ramka")
+
+do StageManager.show("bg_black")
+do StageManager.hide("bg_black", 1.0)
+
+do StageManager.pause(0.2)
+do StageManager.show("old_movie_003_004")
+do StageManager.pause(0.2)
+do StageManager.hide("old_movie_003_004")
+do StageManager.pause(0.5)
+
+do StageManager.show_window()
+
+С тех пор как мы переехали в этот старый дом, Оля плохо спала.
+Ворочалась в постели или съёживалась клубочком под одеялом.
+Порой вскакивала среди ночи, чтобы включить видеомагнитофон.
+Мультфильмы помогали отвлечься от переживаний из-за переезда, родителей...
+
+do StageManager.hide_window()
+do AudioManager.play_sfx("sounds/skrimer01.ogg")
+
+do StageManager.show("owl_screem_effect")
+do StageManager.show("old_movie_001_002")
+do StageManager.pause(0.2)
+do StageManager.hide("old_movie_001_002")
+
+do StageManager.reveal_scene(["Olya_and_Owl"], "Olya_and_Owl0", 1.5)
+do StageManager.show_window()
+
+А потом Оле привиделось это огромное крылатое чудовище за окном.
+Она стала одержима совой.
+Чего только родители ни делали, на какие ухищрения ни шли, чтобы искоренить её страхи.
+Оля напрочь отказывалась спать одна и не верила, что сова была всего лишь дурным сном.
+После сегодняшней ночи я не знал, что думать, как теперь относиться к словам сестры...
+Могут ли кошмары быть заразными?
+
+do StageManager.reveal_scene(["bg_black"], "Olya_and_Owl", 0.7)
+do AudioManager.play_fon("res://sounds/fon/skrip1.ogg", 2.0)
+
+do StageManager.show("bg_pole0")
+do StageManager.show("dancing_animal_on")
+do StageManager.show("over_dancing")
+do StageManager.reveal_scene(["bg_room_night1"], "bg_pole0", 2.0)
+
+Прошлой ночью я лежал без сна и думал о том, что ждёт меня в новой школе.
+До занятий оставалось несколько дней.
+Воображение рисовало длинные извилистые коридоры. Они приводили к классу, заполненному детьми.
+Но ученики за партами были тёмными силуэтами, словно вырезанными по трафарету контурами.
+
+do StageManager.show("nightmare_klass0")
+do StageManager.show("children_in_class_rem")
+do StageManager.show("children_in_class_rem2")
+do StageManager.show("old_movie_intense")
+do StageManager.show("d4_noise")
+
+Посреди их чёрных лиц зияли круглые дыры, а в дырах моргали глаза, будто бы совсем другие существа смотрели на меня из-за плоских чёрных фигур.
+И столько жестокости было в этих взглядах, столько ледяной насмешки, что я дрожал с головы до ног.
+Выживу ли я здесь?
+Не забьют ли меня до смерти толпой быстрые топчущие ноги, вымазанные кровью ботинки...
+Пусть бы она сгорела, эта чёртова школа.
+Пусть бы хоть что-то случилось — неважно что. Лишь бы не идти на уроки.
+Не видеть людей, которые только и мечтают дать оплеуху, поставить подножку, придумать очередное прозвище — ещё оскорбительнее, чем предыдущее.
+
+do StageManager.hide("nightmare_klass0")
+do StageManager.hide("children_in_class_rem")
+do StageManager.hide("children_in_class_rem2")
+do StageManager.hide("old_movie_intense")
+do StageManager.hide("d4_noise")
+
+Будто мои очки делают меня чужаком, каким-то монстром.
+
+Взор мазнул по рисункам, развешанным на стенах.
+Я не считал себя великим художником, но Оля упросила повесить. Только рисование меня хоть немного радовало в последнее время...
+Моим немногочисленным друзьям тоже нравилось, как я рисую. А ведь они, кстати, обещали звонить...
+
+do StageManager.show("d5_phone_bg")
+do StageManager.show("d5_phone_off")
+do StageManager.show("d4_noise")
+do StageManager.show("polina_call_pickedup")
+
+Иногда воображаю, как мама снимает трубку и говорит холодно: «Вы не туда попали».
+Или: «Антона нет».
+
+do StageManager.hide("polina_call_pickedup")
+
+Антона нет...
+
+do StageManager.hide("d5_phone_bg")
+do StageManager.hide("d5_phone_off")
+do StageManager.hide("d4_noise")
+
+Я представлял своих будущих одноклассников и одноклассниц, которые, как и я, лежали в эту минуту в кроватях, слушая вой невидимых оборотней за окном.
+
+do StageManager.show("day1_kovai_0")
+
+Быть может, я всё-таки понравлюсь новому классу?
+Кому вообще нравятся ребята в очках с толстенными линзами?
+Папа вот в детстве носил очки. А теперь он женат на самой красивой женщине в мире — моей маме.
+
+do AudioManager.stop_music(6.0)
+do StageManager.reveal_scene(["bg_room_night1"], "day1_kovai_0", 0.5)
+
+Дом заскрипел под напором ветра.
+Наш прежний дом — бетонный, девятиэтажный — жужжал соседским перфоратором, бубнил телевизором за стеной, плакал навзрыд из квартиры многодетного семейства.
+Теперешний дом — язык не поворачивается назвать его новым — был совсем другим.
+Днём тихий и покладистый — тени отдыхают в углах, в паутине чуланов, под лестницей.
+
+do AudioManager.play_music("music/5_Shadow_Dance.ogg", 45.0, true)
+
+Но ночью они просыпаются.
+Что-то смотрит на меня из углов. Будто фотографии мёртвых родственников с земляными глазами снова повесили на стену вместо моих рисунков.
+Кряхтят половицы, стонут ржавые водостоки, чердак населяют гулкие сквозняки.
+Словно дом играет какую-то дьявольскую мелодию.
+
+do StageManager.reveal_scene(["day1_kovai_0"], "bg_room_night1", 0.5)
+
+Вдруг я понял, что действительно слышу музыку, причём, играет она уже давно.
+Где-то далеко, на самой границе восприятия, пела флейта.
+Она словно бы сливалась с воем ветра, с поскрипыванием старого дома, с моими мыслями, наконец.
+
+do AudioManager.play_sfx("res://sounds/steps/Anton-stairs-out-2.ogg")
+
+do StageManager.reveal_scene(["bg_room_night1"], "day1_kovai_0", 0.5)
+
+Я встал и поторопился к окну. Хотел убедить себя, что нет никакой музыки, что это лишь моё воображение.
+Что никто не может играть там, в холодной заснеженной ночи.
+
+=> END

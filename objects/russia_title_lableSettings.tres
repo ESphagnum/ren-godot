@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cv8mppqbx6sr3"]
+
+[ext_resource type="FontFile" uid="uid://bo7be8psngg7d" path="res://font/russia.ttf" id="1_gkjn8"]
+
+[resource]
+font = ExtResource("1_gkjn8")
+font_size = 80
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)

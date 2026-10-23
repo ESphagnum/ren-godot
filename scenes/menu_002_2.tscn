@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dmxs7uhpsd26e"]
+
+[ext_resource type="Texture2D" uid="uid://1o60gvju6xj7" path="res://images/interface/main_meny/meny_002.png" id="1_kvdw6"]
+[ext_resource type="Script" uid="uid://b2ghpi4aa81kn" path="res://scenes/menu_002_2.gd" id="2_hradi"]
+
+[node name="Menu0022" type="TextureRect" unique_id=1993274847]
+anchors_preset = -1
+anchor_right = 2.062
+anchor_bottom = 1.0
+offset_right = -3959.04
+offset_bottom = -1080.0
+texture = ExtResource("1_kvdw6")
+script = ExtResource("2_hradi")

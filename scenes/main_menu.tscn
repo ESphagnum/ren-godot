@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://bt72cvibhnqra"]
+
+[ext_resource type="Script" uid="uid://chxpcbwie60jc" path="res://scripts/main_menu.gd" id="1_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://fdr8lrqyq3hf" path="res://images/interface/main_meny/meny00.jpg" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://ccak1n04g6mqa" path="res://images/interface/main_meny/fon_01.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://d0h2hh57p1dwp" path="res://images/interface/main_meny/logo.png" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://gyyrhhgs6cam" path="res://scenes/menu002_1.tscn" id="2_flqon"]
+[ext_resource type="PackedScene" uid="uid://ljdaelpg0qno" path="res://scenes/menu001_1.tscn" id="2_wu84c"]
+[ext_resource type="PackedScene" uid="uid://dmxs7uhpsd26e" path="res://scenes/menu_002_2.tscn" id="3_rcqid"]
+[ext_resource type="PackedScene" uid="uid://rgdfnea41vj3" path="res://scenes/menu001_2.tscn" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://cwshhpym7bs4g" path="res://images/interface/main_meny/fon_02.png" id="4_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://ovtipq0a0fr4" path="res://images/interface/main_meny/fon_03.png" id="5_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://bigevopxg317j" path="res://images/interface/main_meny/fon_04.png" id="6_flqon"]
+[ext_resource type="Texture2D" uid="uid://cehloeyi625db" path="res://images/interface/main_meny/fon_05.png" id="7_rcqid"]
+[ext_resource type="Texture2D" uid="uid://bjqxg7wbohyqq" path="res://images/interface/main_meny/fon_06.png" id="8_1ajci"]
+[ext_resource type="PackedScene" uid="uid://kgaan3c4gnxx" path="res://scenes/chastichka_2.tscn" id="9_5pajh"]
+[ext_resource type="PackedScene" uid="uid://cdbsh1nco4b2y" path="res://scenes/chastichka_1_1.tscn" id="12_rcqid"]
+[ext_resource type="PackedScene" uid="uid://50yoky5kqdve" path="res://scenes/chastichka_1_2.tscn" id="13_1ajci"]
+[ext_resource type="Script" uid="uid://bck6wo66oh2rw" path="res://scenes/main_menu_bg.gd" id="13_7b55j"]
+[ext_resource type="PackedScene" uid="uid://bg25hessm77q0" path="res://scenes/MainMenuButton.tscn" id="17_j7ex8"]
+[ext_resource type="PackedScene" uid="uid://bfe5lhrh4jhi4" path="res://scenes/Disclaimer.tscn" id="19_hstxw"]
+[ext_resource type="Texture2D" uid="uid://daaywj8trmy1q" path="res://images/logo/001.jpg" id="20_8egab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pajh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8gd2"]
+
+[node name="MainMenu" type="Control" unique_id=144601157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a8gd2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=400548454]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="meny00" type="TextureRect" parent="." unique_id=1682833862]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ekxnf")
+
+[node name="fon_05" type="TextureRect" parent="." unique_id=2122851817]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_rcqid")
+
+[node name="fon_02" type="TextureRect" parent="." unique_id=1724930584]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_5dd4i")
+
+[node name="fon_06" type="TextureRect" parent="." unique_id=2108388059]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_1ajci")
+
+[node name="Menu0021" parent="." unique_id=817021712 instance=ExtResource("2_flqon")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.95996094
+offset_bottom = 0.0
+
+[node name="Menu0022" parent="." unique_id=1993274847 instance=ExtResource("3_rcqid")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.95996094
+offset_bottom = 0.0
+
+[node name="chastichka_2" parent="." unique_id=642150042 instance=ExtResource("9_5pajh")]
+
+[node name="fon_03" type="TextureRect" parent="." unique_id=989003564]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_lgwnu")
+
+[node name="fon_04" type="TextureRect" parent="." unique_id=1900554832]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_flqon")
+
+[node name="Menu0011" parent="." unique_id=1676816887 instance=ExtResource("2_wu84c")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 3960.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Menu0012" parent="." unique_id=1136323315 instance=ExtResource("3_wu84c")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 3960.0
+offset_bottom = 1080.0
+
+[node name="chastichka_1_1" parent="." unique_id=475147744 instance=ExtResource("12_rcqid")]
+
+[node name="main_menu_bg" type="TextureRect" parent="." unique_id=1389602247]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_8ln24")
+script = ExtResource("13_7b55j")
+
+[node name="chastichka_1_2" parent="." unique_id=701310193 instance=ExtResource("13_1ajci")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=955611178]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -318.0
+offset_top = 80.0
+offset_right = 234.0
+offset_bottom = 247.0
+grow_horizontal = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="UI" type="MarginContainer" parent="." unique_id=2059306535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=2074451899]
+layout_mode = 2
+alignment = 1
+
+[node name="Lang" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=1129362552]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/HBoxContainer/Lang" unique_id=1488408050]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="MainUI" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=980810633]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="UI/HBoxContainer/MainUI" unique_id=1221551423]
+custom_minimum_size = Vector2(0, 280)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5pajh")
+
+[node name="TextureRect" type="TextureRect" parent="UI/HBoxContainer/MainUI" unique_id=909665122]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="TextureButton" type="TextureButton" parent="UI/HBoxContainer/MainUI" unique_id=871525979]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/HBoxContainer/MainUI" unique_id=1728962106]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="UI/HBoxContainer/MainUI/HBoxContainer" unique_id=755434535]
+layout_mode = 2
+
+[node name="NewGame" parent="UI/HBoxContainer/MainUI/HBoxContainer/ButtonContainer" unique_id=605450543 instance=ExtResource("17_j7ex8")]
+layout_mode = 2
+label_text = "НОВАЯ ИГРА"
+fade_in_on_hover_only = true
+
+[node name="Load" parent="UI/HBoxContainer/MainUI/HBoxContainer/ButtonContainer" unique_id=1852670788 instance=ExtResource("17_j7ex8")]
+layout_mode = 2
+label_text = "ЗАГРУЗИТЬ"
+fade_in_on_hover_only = true
+
+[node name="Settings" parent="UI/HBoxContainer/MainUI/HBoxContainer/ButtonContainer" unique_id=1814668457 instance=ExtResource("17_j7ex8")]
+layout_mode = 2
+label_text = "НАСТРОЙКИ"
+fade_in_on_hover_only = true
+
+[node name="About" parent="UI/HBoxContainer/MainUI/HBoxContainer/ButtonContainer" unique_id=410917730 instance=ExtResource("17_j7ex8")]
+layout_mode = 2
+label_text = "ОБ АВТОРАХ"
+fade_in_on_hover_only = true
+
+[node name="Exit" parent="UI/HBoxContainer/MainUI/HBoxContainer/ButtonContainer" unique_id=1619238039 instance=ExtResource("17_j7ex8")]
+layout_mode = 2
+label_text = "ВЫХОД"
+command = 3
+fade_in_on_hover_only = true
+
+[node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer/MainUI/HBoxContainer" unique_id=1212237555]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_a8gd2")
+
+[node name="Dev" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=917906251]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/HBoxContainer/Dev" unique_id=1347633784]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="bg_black" type="ColorRect" parent="." unique_id=1288131416]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1926936914]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("20_8egab")
+
+[node name="Disclaimer" parent="." unique_id=1426934776 instance=ExtResource("19_hstxw")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bfe5lhrh4jhi4"]
+
+[ext_resource type="Texture2D" uid="uid://5j485r8uj0xq" path="res://images/interface/18plus.png" id="1_cps5p"]
+[ext_resource type="FontFile" uid="uid://bo7be8psngg7d" path="res://font/russia.ttf" id="1_xmtsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cps5p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmtsl"]
+
+[node name="Disclaimer" type="Control" unique_id=1426934776]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1659341380]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_cps5p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=127896692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer" unique_id=1570544882]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cps5p")
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1480437669]
+custom_minimum_size = Vector2(1520, 1080)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_xmtsl")
+theme_override_font_sizes/font_size = 62
+text = "Внимание!
+Данная игра не предназначена для лиц младше восемнадцати лет, а также противопоказана впечатлительным людям со слабой психикой. Присутствуют сцены физического и морального насилия, наличие описаний смерти, демонстрация крови и увечий, а также ненормативная лексика. Все персонажи и события являются вымышленными, любое совпадение с реальностью случайно. Всё внутриигровое повествование, звуковое и текстовое содержание являются инструментами создания атмосферы и не выражают позицию разработчиков. Разработчик не несёт ответственность за ваши действия/интерпретации и не призывает вас к каким-либо действиям.
+Будьте осторожны и берегите себя!
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer" unique_id=568426352]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xmtsl")

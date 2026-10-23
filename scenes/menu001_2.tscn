@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://rgdfnea41vj3"]
+
+[ext_resource type="Texture2D" uid="uid://hhbky2sor0xb" path="res://images/interface/main_meny/meny_001.png" id="1_718u7"]
+[ext_resource type="Script" uid="uid://clp240eufvfj6" path="res://scenes/menu_001_2.gd" id="2_piti8"]
+
+[node name="Menu0012" type="TextureRect" unique_id=1136323315]
+anchors_preset = -1
+anchor_right = 2.062
+anchor_bottom = 1.0
+offset_right = -3959.04
+offset_bottom = -1080.0
+texture = ExtResource("1_718u7")
+script = ExtResource("2_piti8")
