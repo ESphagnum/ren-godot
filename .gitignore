@@ -8,7 +8,6 @@ addons/
 *.mp4
 *.png
 *.jpg
-*.rpy
 *.import
 *.rpyc
 *.tmp
@@ -23,3 +22,5 @@ addons/
 *.rpym
 *.rpymc
 *.pck
+*.godot
+*.cfg
