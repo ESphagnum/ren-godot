@@ -24,3 +24,4 @@ addons/
 *.pck
 *.godot
 *.cfg
+*.gd
